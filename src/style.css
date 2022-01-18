@@ -1,0 +1,63 @@
+*{
+    margin:0;
+    border:0;
+    padding:0;
+}
+body{
+    height:100vh;
+    font-family: "Barlow", sans-serif;
+}
+
+a{
+    color:white;
+    text-decoration: none;
+}
+
+#root{
+    height:100%;
+}
+
+.main{
+    position:relative;
+    text-align: center;
+    top:50px;
+    width:400px;
+    margin:auto;
+    background-color:black;
+    color:white;
+    border-radius: 10px;
+}
+
+.info--section{
+    background-color:blue;
+    padding-bottom:15px;
+    border-radius:10px 10px 0 0;
+}
+
+.info--pic{
+    width:100%;
+    height:300px;
+    border-radius:10px 10px 0 0;
+}
+
+.info--name{
+    margin-top:10px;
+}
+
+.info--extra{
+    margin-top:20px;
+}
+
+.info--links{
+    margin-top:10px;
+    display:flex;
+    justify-content: center;
+    list-style-type:none;
+}
+
+.info--links > li{
+    color:white;
+    width:125px;
+    margin:0px 15px;
+    background-color:red;
+}
