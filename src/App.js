@@ -1,13 +1,17 @@
 import Information from "./components/Information"
+import About from "./components/About"
+import Interests from "./components/Interests"
+import Footer from "./components/Footer"
+
 
 
 export default function App() {
   return (
     <div className="main">
       <Information />
-      <h1>About Section</h1>
-      <h1>Interest Section</h1>
-      <h1>Footer</h1>
+      <About />
+      <Interests />
+      <Footer />
     </div>
   )
 }
