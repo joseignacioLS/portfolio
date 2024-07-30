@@ -1,0 +1,36 @@
+@use "../../styles/variables";
+
+.showcase {
+  @include variables.right_column_container;
+  width: 100%;
+  overflow: hidden;
+  min-height: 100dvh;
+
+  .header {
+    max-width: 100%;
+
+    margin-top: variables.$padding_m;
+
+    display: flex;
+    justify-content: space-around;
+    gap: variables.$gap_s;
+    flex-wrap: wrap;
+
+    button {
+      width: fit-content;
+      text-align: center;
+      text-wrap: nowrap;
+      opacity: variables.$op_medium;
+
+
+      &.selected {
+        font-weight: bold;
+        opacity: 1;
+      }
+    }
+  }
+
+  @include variables.mobile_rules {
+    @include variables.full_width_container;
+  }
+}

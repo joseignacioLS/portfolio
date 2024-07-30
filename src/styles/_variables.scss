@@ -1,0 +1,135 @@
+// COLORS
+$color_main: #750F5C;
+$color_main_contrast: #E5DCC5;
+
+$color_leaf: #018E42;
+$color_seagull: #848FA5;
+$color_swamp: #2E382E;
+
+// PADDINGS
+$padding_xxl: 16rem;
+$padding_xl: 8rem;
+$padding_l: 4rem;
+$padding_m: 2rem;
+$padding_s: 1rem;
+$padding_xs: .5rem;
+$padding_xxs: .25rem;
+
+// GAP
+$gap_xxl: 16rem;
+$gap_xl: 8rem;
+$gap_l: 4rem;
+$gap_m: 2rem;
+$gap_s: 1rem;
+$gap_xs: .5rem;
+
+//TIMES
+$animation_default: .3s;
+
+// FONT SIZES
+$fontsize_xxxl: 6rem;
+$fontsize_xxl: 4rem;
+$fontsize_xl: 2rem;
+$fontsize_l: 1.5rem;
+$fontsize_m: 1rem;
+$fontsize_s: .75rem;
+$fontsize_xs: .5rem;
+$fontsize_xxs: .25rem;
+
+//OPACITY
+
+$op_invisible: 0;
+$op_lowest: .1;
+$op_low: .2;
+$op_medium: .5;
+$op_high: .7;
+$op_full: 1;
+
+// MEDIAS
+$mobile_break: 700px;
+$tablet_break: 1023px;
+
+// RESPONSIVE
+@mixin mobile_rules {
+  @media (width < $mobile_break) {
+    @content;
+  }
+}
+
+
+@mixin tablet_rules {
+  @media (width < $tablet_break) {
+    @content;
+  }
+}
+
+@mixin full_width_container {
+  padding: 0 $padding_xxl;
+  transition: padding $animation_default;
+
+  @include tablet_rules {
+    padding: 0 $padding_s;
+  }
+
+  @include mobile_rules {
+    padding: 0 $padding_s;
+  }
+}
+
+@mixin left_column_container {
+  padding-left: $padding_xl;
+  transition: padding $animation_default;
+
+  @include tablet_rules {
+    padding-left: $padding_m;
+  }
+
+  @include mobile_rules {
+    padding-left: $padding_s;
+  }
+}
+
+@mixin right_column_container {
+  padding-right: $padding_xl;
+  transition: padding $animation_default;
+
+  @include tablet_rules {
+    padding-right: $padding_m;
+  }
+
+  @include mobile_rules {
+    padding-right: $padding_s;
+  }
+}
+
+
+// TEXT
+@mixin main_title {
+  font-size: $fontsize_xxxl;
+
+  @include mobile_rules {
+    font-size: $fontsize_xxl;
+  }
+}
+
+
+@mixin title {
+  font-size: $fontsize_xl;
+  font-weight: bold;
+
+  @include mobile_rules {
+    font-size: $fontsize_l;
+  }
+}
+
+@mixin subtitle {
+  font-size: $fontsize_m;
+}
+
+@mixin text {
+  font-size: $fontsize_m;
+}
+
+@mixin quote {
+  font-size: $fontsize_s;
+}

@@ -1,0 +1,30 @@
+@use "../../styles/variables";
+
+.footer {
+  grid-area: footer;
+
+  width: 100%;
+
+  padding: variables.$padding_xs 0;
+
+  display: flex;
+  justify-content: center;
+  gap: variables.$gap_m;
+
+  background-color: rgba(black, variables.$op_low);
+
+  .entry {
+    background-color: white;
+    padding: variables.$padding_xxs;
+    border-radius: .5rem;
+    height: 32px;
+    aspect-ratio: 1 / 1;
+
+    cursor: pointer;
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}

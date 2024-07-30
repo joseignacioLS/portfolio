@@ -1,0 +1,66 @@
+@use "../../../styles/variables";
+
+.educationAndExperience {
+  padding: variables.$padding_s 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: variables.$gap_s;
+
+  .entry {
+    display: flex;
+    flex-direction: column;
+    gap: variables.$gap_xs;
+    padding: variables.$padding_m variables.$padding_l;
+    border-radius: 1rem;
+    background-color: rgba(variables.$color_main_contrast, variables.$op_lowest);
+    box-shadow: 5px 5px 0 rgba(variables.$color_swamp, variables.$op_high);
+
+    transition: padding variables.$animation_default;
+
+    @include variables.tablet_rules {
+      padding: variables.$padding_s variables.$padding_m;
+    }
+
+
+    .title {
+      @include variables.title;
+      border-bottom: 2px solid variables.$color_main_contrast;
+
+    }
+
+    .subtitle {
+      @include variables.subtitle;
+    }
+
+    .dates {
+      font-style: italic;
+    }
+
+    .stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: variables.$gap_xs;
+
+      span {
+        @include variables.quote;
+        border-radius: 1000px;
+        background-color: rgba(black, variables.$op_lowest);
+        padding: variables.$padding_xs;
+
+      }
+    }
+
+    .descriptionLine {
+      margin-bottom: .5ch;
+    }
+
+    &.experience {
+      background-color: rgba(variables.$color_leaf, variables.$op_medium);
+    }
+
+    &.education {
+      background-color: rgba(variables.$color_seagull, variables.$op_medium);
+    }
+  }
+}

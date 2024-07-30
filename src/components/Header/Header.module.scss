@@ -1,0 +1,77 @@
+@use "../../styles/variables";
+
+.header {
+  @include variables.left_column_container;
+  height: 100dvh;
+
+  position: sticky;
+  top: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+
+  gap: variables.$gap_m;
+
+  text-align: right;
+
+
+  .titleWrapper {
+    width: 100%;
+
+    .title {
+      @include variables.main_title;
+      width: fit-content;
+
+      padding-bottom: variables.$gap_s;
+      border-bottom: 8px solid rgba(variables.$color_main_contrast, variables.$op_medium);
+
+      display: inline-block;
+
+      color: rgba(variables.$color_main_contrast, variables.$op_medium);
+      text-wrap: balance;
+      line-height: 1.5ch;
+
+
+      .name {
+        color: variables.$color_main_contrast;
+      }
+    }
+
+  }
+
+  .aboutMe {
+    display: flex;
+    flex-direction: column;
+    gap: variables.$gap_s;
+    width: 80%;
+    transition: width variables.$animation_default;
+
+    p {
+      padding: variables.$padding_xs variables.$padding_s;
+      border-radius: 1rem;
+      background: linear-gradient(135deg, transparent 40%, rgba(black, variables.$op_medium) 90%);
+      transition: background-color 1s;
+      text-wrap: balance;
+    }
+
+    @include variables.tablet_rules {
+      width: 100%;
+      gap: variables.$gap_xs;
+    }
+  }
+
+  @include variables.tablet_rules {
+    text-align: center;
+
+  }
+
+  @include variables.mobile_rules {
+    @include variables.full_width_container;
+    position: relative;
+
+    height: 100dvh;
+
+  }
+}
