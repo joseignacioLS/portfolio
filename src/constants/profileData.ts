@@ -111,7 +111,7 @@ export const technologies = {
 export const educationAndExperienceItems: IEducationAndExperienceItem[] = [
   {
     category: "experience",
-    title: "Desarrollador Frond End",
+    title: "Desarrollador Front End",
     position: "Desarrollador Front End Mid",
     entity: "NTT Data",
     stack: [

@@ -39,8 +39,8 @@ body {
   grid-template-columns: 3fr 4fr;
   column-gap: variables.$gap_xl;
 
-  color: variables.$color_bone_contrast;
-  background: variables.$color_bone;
+  color: variables.$color_bone;
+  background: variables.$color_wine;
 
   transition: column-gap variables.$animation_default;
 

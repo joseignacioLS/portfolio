@@ -24,17 +24,16 @@
       width: fit-content;
 
       padding-bottom: variables.$gap_s;
-      border-bottom: 8px solid
-        rgba(variables.$color_bone_contrast, variables.$op_medium);
+      border-bottom: 8px solid rgba(variables.$color_bone, variables.$op_medium);
 
       display: inline-block;
 
-      color: rgba(variables.$color_bone_contrast, variables.$op_medium);
+      color: rgba(variables.$color_bone, variables.$op_medium);
       text-wrap: balance;
       line-height: 1.5ch;
 
       .name {
-        color: variables.$color_bone_contrast;
+        color: variables.$color_bone;
       }
     }
   }
@@ -42,12 +41,11 @@
   .aboutMe {
     display: flex;
     flex-direction: column;
-    gap: variables.$gap_s;
+    gap: variables.$gap_m;
     width: 80%;
     transition: width variables.$animation_default;
 
     p {
-      padding: variables.$padding_xs variables.$padding_s;
       border-radius: 1rem;
       transition: background-color 1s;
       text-wrap: balance;

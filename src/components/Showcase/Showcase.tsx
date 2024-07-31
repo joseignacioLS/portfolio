@@ -6,7 +6,7 @@ import EducationAndExperience from "../Pages/EducationAndExperience/EducationAnd
 import Projects from "../Pages/Projects/Projects";
 
 import styles from "./Showcase.module.scss";
-import Skills from "../Pages/Skills/Skills";
+import AboutMe from "../Pages/AboutMe/AboutMe";
 
 interface ISection {
   title: string;
@@ -14,8 +14,8 @@ interface ISection {
 }
 const sections: ISection[] = [
   {
-    title: "Skills",
-    component: Skills,
+    title: "Sobre Mí",
+    component: AboutMe,
   },
   {
     title: "Timeline",
