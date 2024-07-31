@@ -13,7 +13,10 @@
     gap: variables.$gap_xs;
     padding: variables.$padding_m variables.$padding_l;
     border-radius: 1rem;
-    background-color: rgba(variables.$color_main_contrast, variables.$op_lowest);
+    background-color: rgba(
+      variables.$color_main_contrast,
+      variables.$op_lowest
+    );
     box-shadow: 5px 5px 0 rgba(variables.$color_swamp, variables.$op_high);
 
     transition: padding variables.$animation_default;
@@ -22,11 +25,9 @@
       padding: variables.$padding_s variables.$padding_m;
     }
 
-
     .title {
       @include variables.title;
       border-bottom: 2px solid variables.$color_main_contrast;
-
     }
 
     .subtitle {
@@ -48,11 +49,19 @@
         background-color: rgba(black, variables.$op_lowest);
         padding: variables.$padding_xs;
 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: variables.$gap_xs;
+
+        img {
+          height: 16px;
+        }
       }
     }
 
     .descriptionLine {
-      margin-bottom: .5ch;
+      margin-bottom: 0.5ch;
     }
 
     &.experience {

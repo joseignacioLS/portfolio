@@ -1,6 +1,9 @@
 import { formatDateForCV } from "@/utils/datetime";
 import styles from "./EducationAndExperience.module.scss";
-import { educationAndExperienceItems } from "@/constants/profileData";
+import {
+  educationAndExperienceItems,
+  technologies,
+} from "@/constants/profileData";
 import ExpandableHeight from "@/components/ExpandableHeight/ExpandableHeight";
 
 const EducationAndExperience = () => {
@@ -33,7 +36,12 @@ const EducationAndExperience = () => {
               </div>
               <div className={styles.stack}>
                 {item.stack.map((stackItem) => {
-                  return <span key={stackItem}>{stackItem}</span>;
+                  return (
+                    <span key={stackItem}>
+                      <img src={technologies[stackItem].icon} />
+                      {technologies[stackItem].name}
+                    </span>
+                  );
                 })}
               </div>
 

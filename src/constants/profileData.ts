@@ -1,5 +1,115 @@
 import { IEducationAndExperienceItem } from "./types";
 
+export enum ETechnologies {
+  REACT,
+  IONIC,
+  TYPESCRIPT,
+  JAVASCRIPT,
+  SASS,
+  GIT,
+  GITHUB,
+  AZURE,
+  JIRA,
+  AGILE,
+  ANGULAR,
+  PYTHON,
+  AWS,
+  JENKINS,
+  GITLAB,
+  HTML,
+  CSS,
+  NODEJS,
+  EXPRESSJS,
+  R,
+  PERL,
+}
+export const technologies = {
+  [ETechnologies.REACT]: {
+    name: "React",
+    icon: "/icons/react-16-svgrepo-com.svg",
+  },
+  [ETechnologies.IONIC]: {
+    name: "Ionic",
+    icon: "/icons/react-16-svgrepo-com.svg",
+  },
+  [ETechnologies.TYPESCRIPT]: {
+    name: "Typescript",
+    icon: "/icons/react-16-svgrepo-com.svg",
+  },
+  [ETechnologies.JAVASCRIPT]: {
+    name: "Javascript",
+    icon: "/icons/react-16-svgrepo-com.svg",
+  },
+  [ETechnologies.SASS]: {
+    name: "Sass",
+    icon: "/icons/react-16-svgrepo-com.svg",
+  },
+  [ETechnologies.GIT]: {
+    name: "git",
+    icon: "/icons/react-16-svgrepo-com.svg",
+  },
+  [ETechnologies.GITHUB]: {
+    name: "GitHub",
+    icon: "/icons/react-16-svgrepo-com.svg",
+  },
+  [ETechnologies.AZURE]: {
+    name: "Azure",
+    icon: "/icons/react-16-svgrepo-com.svg",
+  },
+  [ETechnologies.JIRA]: {
+    name: "Jira",
+    icon: "/icons/react-16-svgrepo-com.svg",
+  },
+  [ETechnologies.AGILE]: {
+    name: "Agile",
+    icon: "/icons/react-16-svgrepo-com.svg",
+  },
+  [ETechnologies.ANGULAR]: {
+    name: "Angular",
+    icon: "/icons/react-16-svgrepo-com.svg",
+  },
+  [ETechnologies.PYTHON]: {
+    name: "Python",
+    icon: "/icons/react-16-svgrepo-com.svg",
+  },
+  [ETechnologies.AWS]: {
+    name: "AWS",
+    icon: "/icons/react-16-svgrepo-com.svg",
+  },
+  [ETechnologies.JENKINS]: {
+    name: "Jenkins",
+    icon: "/icons/react-16-svgrepo-com.svg",
+  },
+  [ETechnologies.GITLAB]: {
+    name: "Gitlab",
+    icon: "/icons/react-16-svgrepo-com.svg",
+  },
+  [ETechnologies.HTML]: {
+    name: "HTML",
+    icon: "/icons/react-16-svgrepo-com.svg",
+  },
+  [ETechnologies.CSS]: {
+    name: "CSS",
+    icon: "/icons/react-16-svgrepo-com.svg",
+  },
+  [ETechnologies.NODEJS]: {
+    name: "NodeJS",
+    icon: "/icons/react-16-svgrepo-com.svg",
+  },
+  [ETechnologies.EXPRESSJS]: {
+    name: "expressJS",
+    icon: "/icons/react-16-svgrepo-com.svg",
+  },
+  [ETechnologies.R]: {
+    name: "R",
+    icon: "/icons/react-16-svgrepo-com.svg",
+  },
+  [ETechnologies.PERL]: {
+    name: "Perl",
+    icon: "/icons/react-16-svgrepo-com.svg",
+  },
+};
+
 export const educationAndExperienceItems: IEducationAndExperienceItem[] = [
   {
     category: "experience",
@@ -7,17 +117,17 @@ export const educationAndExperienceItems: IEducationAndExperienceItem[] = [
     position: "Desarrollador Front End Mid",
     entity: "NTT Data",
     stack: [
-      "React",
-      "Ionic7",
-      "Typescript",
-      "sass",
-      "git",
-      "GitHub",
-      "Azure",
-      "Jira",
-      "Agile",
-      "Angular",
-      "Python"
+      ETechnologies.REACT,
+      ETechnologies.IONIC,
+      ETechnologies.TYPESCRIPT,
+      ETechnologies.SASS,
+      ETechnologies.GIT,
+      ETechnologies.GITHUB,
+      ETechnologies.AZURE,
+      ETechnologies.JIRA,
+      ETechnologies.AGILE,
+      ETechnologies.ANGULAR,
+      ETechnologies.PYTHON,
     ],
     startDate: new Date("2023-06-01"),
     description: [
@@ -27,7 +137,7 @@ export const educationAndExperienceItems: IEducationAndExperienceItem[] = [
       "Desarrollo de la aplicación interna de reserva de espacios de ACCIONA",
       "Desarrollo y mantenimiento de la web de SEATMO",
       "Desarrollo de Scripts de automatización en Python para Repsol",
-      "Mantenimiento web para Naturgy con Angular"
+      "Mantenimiento web para Naturgy con Angular",
     ],
   },
   {
@@ -36,13 +146,12 @@ export const educationAndExperienceItems: IEducationAndExperienceItem[] = [
     position: "Desarrollador Front End en prácticas",
     entity: "The Key Talent",
     stack: [
-      "Angular",
-      "Material",
-      "sass",
-      "AWS",
-      "Agile",
-      "Jenkins",
-      "Gitlab"
+      ETechnologies.ANGULAR,
+      ETechnologies.SASS,
+      ETechnologies.AWS,
+      ETechnologies.AGILE,
+      ETechnologies.JENKINS,
+      ETechnologies.GITLAB,
     ],
     startDate: new Date("2022-10-01"),
     endDate: new Date("2023-05-01"),
@@ -52,7 +161,7 @@ export const educationAndExperienceItems: IEducationAndExperienceItem[] = [
       "Análisis de implementación de características",
       "Mantenimiento de aplicaciones desarrolladas con Vue",
       "Desarrollo de landing pages ad-hoc HTML/CSS",
-      "Control de versiones con git/Gitlab + CI/CD con jenkins y AWS"
+      "Control de versiones con git/Gitlab + CI/CD con jenkins y AWS",
     ],
   },
   {
@@ -61,13 +170,14 @@ export const educationAndExperienceItems: IEducationAndExperienceItem[] = [
     position: "Estudiante",
     entity: "Upgrade Hub",
     stack: [
-      "React",
-      "Angular",
-      "HTML/CSS",
-      "Git",
-      "Agile",
-      "NodeJS",
-      "expressJS"
+      ETechnologies.REACT,
+      ETechnologies.ANGULAR,
+      ETechnologies.HTML,
+      ETechnologies.CSS,
+      ETechnologies.GIT,
+      ETechnologies.AGILE,
+      ETechnologies.NODEJS,
+      ETechnologies.EXPRESSJS,
     ],
     startDate: new Date("2022-10-01"),
     endDate: new Date("2023-05-01"),
@@ -79,11 +189,12 @@ export const educationAndExperienceItems: IEducationAndExperienceItem[] = [
     position: "Profesor Ayudante",
     entity: "Universidad de Alicante",
     stack: [
-      "Python",
-      "R",
-      "HTML/CSS",
-      "Javascript",
-      "Perl"
+      ETechnologies.PYTHON,
+      ETechnologies.R,
+      ETechnologies.HTML,
+      ETechnologies.CSS,
+      ETechnologies.JAVASCRIPT,
+      ETechnologies.PERL,
     ],
     startDate: new Date("2021-09"),
     endDate: new Date("2022-05"),
@@ -91,7 +202,7 @@ export const educationAndExperienceItems: IEducationAndExperienceItem[] = [
       "Procesado de datos con Python (librerías y desarrollo de scripts propios)",
       "Desarrollo de herramientas e interfaces en HTML/JS",
       "Análisis estadístico con R",
-      "Desarrollo y mantenimiento de la página web del grupo de investigación"
+      "Desarrollo y mantenimiento de la página web del grupo de investigación",
     ],
   },
   {
@@ -146,6 +257,4 @@ export const educationAndExperienceItems: IEducationAndExperienceItem[] = [
   },
 ];
 
-export const projects = [{
-
-}]
+export const projects = [{}];
