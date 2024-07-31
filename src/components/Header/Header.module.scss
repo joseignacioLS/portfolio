@@ -25,16 +25,16 @@
 
       padding-bottom: variables.$gap_s;
       border-bottom: 8px solid
-        rgba(variables.$color_main_contrast, variables.$op_medium);
+        rgba(variables.$color_bone_contrast, variables.$op_medium);
 
       display: inline-block;
 
-      color: rgba(variables.$color_main_contrast, variables.$op_medium);
+      color: rgba(variables.$color_bone_contrast, variables.$op_medium);
       text-wrap: balance;
       line-height: 1.5ch;
 
       .name {
-        color: variables.$color_main_contrast;
+        color: variables.$color_bone_contrast;
       }
     }
   }
@@ -60,6 +60,7 @@
   }
 
   @include variables.tablet_rules {
+    align-items: center;
     text-align: center;
   }
 

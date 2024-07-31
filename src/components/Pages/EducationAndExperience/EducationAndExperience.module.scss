@@ -14,10 +14,11 @@
     padding: variables.$padding_m variables.$padding_l;
     border-radius: 1rem;
     background-color: rgba(
-      variables.$color_main_contrast,
+      variables.$color_bone_contrast,
       variables.$op_lowest
     );
-    box-shadow: 5px 5px 0 rgba(variables.$color_swamp, variables.$op_high);
+    box-shadow: 5px 5px 0
+      rgba(variables.$color_bone_contrast, variables.$op_medium);
 
     transition: padding variables.$animation_default;
 
@@ -27,7 +28,7 @@
 
     .title {
       @include variables.title;
-      border-bottom: 2px solid variables.$color_main_contrast;
+      border-bottom: 2px solid variables.$color_bone_contrast;
     }
 
     .subtitle {
@@ -46,7 +47,7 @@
       span {
         @include variables.quote;
         border-radius: 1000px;
-        background-color: rgba(black, variables.$op_lowest);
+        background-color: rgba(variables.$color_swamp, variables.$op_lowest);
         padding: variables.$padding_xs;
 
         display: flex;
@@ -55,7 +56,9 @@
         gap: variables.$gap_xs;
 
         img {
-          height: 16px;
+          height: 24px;
+          opacity: variables.$op_high;
+          filter: brightness(0) invert(1);
         }
       }
     }
@@ -64,12 +67,12 @@
       margin-bottom: 0.5ch;
     }
 
-    &.experience {
-      background-color: rgba(variables.$color_leaf, variables.$op_medium);
-    }
+    // &.experience {
+    //   background-color: rgba(variables.$color_leaf, variables.$op_medium);
+    // }
 
-    &.education {
-      background-color: rgba(variables.$color_seagull, variables.$op_medium);
-    }
+    // &.education {
+    //   background-color: rgba(variables.$color_seagull, variables.$op_medium);
+    // }
   }
 }

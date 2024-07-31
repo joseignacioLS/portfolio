@@ -36,10 +36,14 @@ const EducationAndExperience = () => {
               </div>
               <div className={styles.stack}>
                 {item.stack.map((stackItem) => {
+                  const { name, icon } = technologies[stackItem] as {
+                    name: string;
+                    icon?: string;
+                  };
                   return (
                     <span key={stackItem}>
-                      <img src={technologies[stackItem].icon} />
-                      {technologies[stackItem].name}
+                      {icon && <img src={icon} />}
+                      {name}
                     </span>
                   );
                 })}

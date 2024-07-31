@@ -2,11 +2,11 @@
 
 import { JSXElementConstructor, useState } from "react";
 
-import Timeline from "../Pages/Timeline/Timeline";
 import EducationAndExperience from "../Pages/EducationAndExperience/EducationAndExperience";
 import Projects from "../Pages/Projects/Projects";
 
 import styles from "./Showcase.module.scss";
+import Skills from "../Pages/Skills/Skills";
 
 interface ISection {
   title: string;
@@ -14,11 +14,11 @@ interface ISection {
 }
 const sections: ISection[] = [
   {
-    title: "Timeline",
-    component: Timeline,
+    title: "Skills",
+    component: Skills,
   },
   {
-    title: "Educación y Experiencia",
+    title: "Timeline",
     component: EducationAndExperience,
   },
   {

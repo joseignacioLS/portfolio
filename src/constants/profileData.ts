@@ -30,83 +30,81 @@ export const technologies = {
   },
   [ETechnologies.IONIC]: {
     name: "Ionic",
-    icon: "/icons/react-16-svgrepo-com.svg",
+    icon: "/icons/ionic-16-svgrepo-com.svg",
   },
   [ETechnologies.TYPESCRIPT]: {
     name: "Typescript",
-    icon: "/icons/react-16-svgrepo-com.svg",
+    icon: "/icons/typescript-16-svgrepo-com.svg",
   },
   [ETechnologies.JAVASCRIPT]: {
     name: "Javascript",
-    icon: "/icons/react-16-svgrepo-com.svg",
+    icon: "/icons/javascript-16-svgrepo-com.svg",
   },
   [ETechnologies.SASS]: {
     name: "Sass",
-    icon: "/icons/react-16-svgrepo-com.svg",
+    icon: "/icons/sass-svgrepo-com.svg",
   },
   [ETechnologies.GIT]: {
     name: "git",
-    icon: "/icons/react-16-svgrepo-com.svg",
+    icon: "/icons/git-svgrepo-com.svg",
   },
   [ETechnologies.GITHUB]: {
     name: "GitHub",
-    icon: "/icons/react-16-svgrepo-com.svg",
+    icon: "/icons/github-svgrepo-com.svg",
   },
   [ETechnologies.AZURE]: {
     name: "Azure",
-    icon: "/icons/react-16-svgrepo-com.svg",
+    icon: "/icons/azure-devops-svgrepo-com.svg",
   },
   [ETechnologies.JIRA]: {
     name: "Jira",
-    icon: "/icons/react-16-svgrepo-com.svg",
+    icon: "/icons/jira-svgrepo-com.svg",
   },
   [ETechnologies.AGILE]: {
     name: "Agile",
-    icon: "/icons/react-16-svgrepo-com.svg",
   },
   [ETechnologies.ANGULAR]: {
     name: "Angular",
-    icon: "/icons/react-16-svgrepo-com.svg",
+    icon: "/icons/angular-16-svgrepo-com.svg",
   },
   [ETechnologies.PYTHON]: {
     name: "Python",
-    icon: "/icons/react-16-svgrepo-com.svg",
+    icon: "/icons/python-16-svgrepo-com.svg",
   },
   [ETechnologies.AWS]: {
     name: "AWS",
-    icon: "/icons/react-16-svgrepo-com.svg",
+    icon: "/icons/aws-ec2-svgrepo-com.svg",
   },
   [ETechnologies.JENKINS]: {
     name: "Jenkins",
-    icon: "/icons/react-16-svgrepo-com.svg",
+    icon: "/icons/jenkins-svgrepo-com.svg",
   },
   [ETechnologies.GITLAB]: {
     name: "Gitlab",
-    icon: "/icons/react-16-svgrepo-com.svg",
+    icon: "/icons/gitlab-svgrepo-com.svg",
   },
   [ETechnologies.HTML]: {
     name: "HTML",
-    icon: "/icons/react-16-svgrepo-com.svg",
+    icon: "/icons/html-16-svgrepo-com.svg",
   },
   [ETechnologies.CSS]: {
     name: "CSS",
-    icon: "/icons/react-16-svgrepo-com.svg",
+    icon: "/icons/css-16-svgrepo-com.svg",
   },
   [ETechnologies.NODEJS]: {
     name: "NodeJS",
-    icon: "/icons/react-16-svgrepo-com.svg",
+    icon: "/icons/node-16-svgrepo-com.svg",
   },
   [ETechnologies.EXPRESSJS]: {
     name: "expressJS",
-    icon: "/icons/react-16-svgrepo-com.svg",
   },
   [ETechnologies.R]: {
     name: "R",
-    icon: "/icons/react-16-svgrepo-com.svg",
+    icon: "/icons/r-16-svgrepo-com.svg",
   },
   [ETechnologies.PERL]: {
     name: "Perl",
-    icon: "/icons/react-16-svgrepo-com.svg",
+    icon: "/icons/perl-16-svgrepo-com.svg",
   },
 };
 
