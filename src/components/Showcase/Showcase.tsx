@@ -11,19 +11,23 @@ import AboutMe from "../Pages/AboutMe/AboutMe";
 interface ISection {
   title: string;
   component: JSXElementConstructor<any>;
+  icon: string;
 }
 const sections: ISection[] = [
   {
     title: "Sobre Mí",
     component: AboutMe,
+    icon: "profile-round-1342-svgrepo-com.svg",
   },
   {
     title: "Timeline",
     component: EducationAndExperience,
+    icon: "square-cv-svgrepo-com.svg",
   },
   {
     title: "Proyectos",
     component: Projects,
+    icon: "cards-bold-svgrepo-com.svg",
   },
 ];
 
@@ -40,12 +44,12 @@ const Showcase = () => {
           return (
             <button
               key={s.title}
-              className={`${selected ? styles.selected : ""}`}
+              className={`${styles.tab} ${selected ? styles.selected : ""}`}
               onClick={() => {
                 handleChangeSection(s);
               }}
             >
-              {s.title}
+              <img src={`/icons/${s.icon}`} alt={s.title} />
             </button>
           );
         })}

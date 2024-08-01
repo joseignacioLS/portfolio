@@ -2,7 +2,11 @@
 
 .aboutMe {
   width: 100%;
-  display: flex;
-  justify-content: center;
 
+  .portrait {
+    float: left;
+    width: 200px;
+    margin: variables.$gap_xs;
+    border-radius: variables.$gap_s;
+  }
 }

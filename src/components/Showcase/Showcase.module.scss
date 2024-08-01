@@ -2,6 +2,8 @@
 
 .showcase {
   @include variables.right_column_container;
+  grid-area: main;
+  
   width: 100%;
   overflow: hidden;
   min-height: 100dvh;
@@ -9,24 +11,31 @@
   .header {
     max-width: 100%;
 
-    margin-top: variables.$padding_m;
+    margin-top: variables.$gap_m;
+    margin-bottom: variables.$gap_m;
 
     display: flex;
     justify-content: space-around;
     gap: variables.$gap_s;
     flex-wrap: wrap;
 
-    button {
+    .tab {
       width: fit-content;
       text-align: center;
       text-wrap: nowrap;
       opacity: variables.$op_medium;
 
       text-transform: uppercase;
+      opacity: variables.$op_low;
+
+      img {
+        height: 32px;
+        filter: brightness(0) invert(1);
+      }
 
       &.selected {
         font-weight: bold;
-        opacity: 1;
+        opacity: variables.$op_high;
       }
     }
   }

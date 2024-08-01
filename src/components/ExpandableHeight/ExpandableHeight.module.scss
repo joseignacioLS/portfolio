@@ -5,9 +5,8 @@
   position: relative;
   display: grid;
   grid-template-rows: 0fr;
-  transition: grid-template-rows variables.$animation_default;
+  transition: grid-template-rows variables.$animation_default, padding variables.$animation_default;
   margin-bottom: variables.$gap_s;
-  padding-bottom: variables.$gap_xs;
 
   >div {
     width: 100%;
@@ -16,6 +15,7 @@
 
   &.expanded {
     grid-template-rows: 1fr;
+    padding-bottom: variables.$gap_xs;
   }
 
   .toggleShowBtn {
@@ -39,5 +39,11 @@
     left: auto;
     right: 0%;
     transform: none;
+  }
+
+  &.noToggleBtn {
+    margin-bottom: 0;
+    padding-bottom: 0;
+
   }
 }

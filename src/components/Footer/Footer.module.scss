@@ -5,7 +5,7 @@
 
   width: 100%;
 
-  padding: variables.$padding_xs 0;
+  padding: variables.$gap_xs 0;
 
   display: flex;
   justify-content: center;
@@ -15,7 +15,7 @@
 
   .entry {
     background-color: white;
-    padding: variables.$padding_xxs;
+    padding: variables.$gap_xxs;
     border-radius: .5rem;
     height: 32px;
     aspect-ratio: 1 / 1;
