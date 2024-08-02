@@ -215,7 +215,7 @@ export const educationAndExperienceItems: IEducationAndExperienceItem[] = [
   },
   {
     category: "experience",
-    title: "Investigador en Visitante",
+    title: "Investigador Visitante",
     position: "Becario de Doctorado",
     entity: "Queen Mary University of London",
     stack: [],

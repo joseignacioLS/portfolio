@@ -1,32 +1,45 @@
 import { educationAndExperienceItems } from "@/constants/profileData";
 import styles from "./Projects.module.scss";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
-const minTime = Math.min(
-  ...educationAndExperienceItems.map((item) => item.startDate.getTime())
-);
-
+const baseYear = 2009;
+const minTime = new Date(`${baseYear + 8}-01-01`).getTime();
 const totalTime = new Date().getTime() - minTime;
-const years = Array.from(new Array(new Date().getUTCFullYear() - 2009 + 1)).map(
-  (_, index) => {
-    return new Date().getUTCFullYear() - index;
-  }
-);
+const years = Array.from(
+  new Array(new Date().getUTCFullYear() - baseYear + 1)
+).map((_, index) => {
+  return new Date().getUTCFullYear() - index;
+});
 
 const Projects = () => {
-  const [isMobile, setIsMobile] = useState(100);
-  useEffect(() => {
-    const checkResolution = () => {
-      const width = window.innerWidth;
-      setIsMobile(100 * (width < 700 ? (width - 144) / width : 1));
-    };
-    checkResolution();
-    window.addEventListener("resize", checkResolution);
-    return () => window.removeEventListener("resize", checkResolution);
-  }, []);
-  console.log(isMobile);
+  const [dragging, setDragging] = useState(false);
+
+  const handleDrag = (event: React.MouseEvent) => {
+    // scroll section horizontally on drag
+    if (dragging) {
+      const diff = event.movementX;
+      const projects = event.currentTarget;
+      if (!projects) return;
+      projects.scrollLeft -= diff;
+    }
+  };
   return (
-    <section className={styles.projects}>
+    <section
+      className={styles.projects}
+      onMouseDown={(e) => {
+        e.stopPropagation();
+        setDragging(true);
+      }}
+      onMouseUp={(e) => {
+        e.stopPropagation();
+        setDragging(false);
+      }}
+      onMouseLeave={(e) => {
+        e.stopPropagation();
+        setDragging(false);
+      }}
+      onMouseMove={handleDrag}
+    >
       {years.map((year) => {
         const timeDistance =
           new Date().getTime() - new Date(year + "/01/01").getTime();
@@ -35,7 +48,7 @@ const Projects = () => {
             key={year}
             className={styles.year}
             style={{
-              left: `${isMobile * (timeDistance / totalTime)}%`,
+              left: `${100 * (timeDistance / totalTime)}%`,
             }}
             data-year={year}
           ></div>
@@ -54,16 +67,22 @@ const Projects = () => {
           const duration = endDate - startDate;
           return (
             <div
-              className={styles.timeline}
               key={`${item.title}-${startDate}`}
+              className={styles.timeline}
               style={{
-                marginLeft: `${100 * (timeSinceFinish / totalTime)}%`,
-                width: `${100 * (duration / totalTime)}%`,
+                paddingLeft: `${100 * (timeSinceFinish / totalTime)}%`,
               }}
             >
-              <span className={styles.tag}>
-                {item.title} @ {item.entity}
-              </span>
+              <div
+                className={styles.line}
+                style={{
+                  width: `${100 * (duration / totalTime)}%`,
+                }}
+              ></div>
+              <div className={styles.tag}>
+                <p>{item.title}</p>
+                <p>@ {item.entity}</p>
+              </div>
             </div>
           );
         })}
