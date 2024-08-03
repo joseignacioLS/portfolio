@@ -4,7 +4,7 @@
   @include variables.left_column_container;
 
   grid-area: header;
-  height: 100dvh;
+  height: 100%;
 
   position: sticky;
   top: 0;
@@ -17,6 +17,8 @@
   gap: variables.$gap_m;
 
   text-align: right;
+
+  overflow: auto;
 
   .titleWrapper {
     width: 100%;

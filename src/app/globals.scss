@@ -27,17 +27,20 @@ html {
 
 body {
   width: 100%;
-  height: fit-content;
+  height: 100%;
   display: grid;
   grid-template-areas: "header main"
     "footer footer";
   grid-template-columns: 3fr 4fr;
+  grid-template-rows: 1fr auto;
   column-gap: variables.$gap_xl;
 
   color: variables.$color_bone;
   background: variables.$color_wine;
 
   transition: column-gap variables.$animation_default;
+
+  overflow: auto;
 
   @include variables.tablet_rules {
     column-gap: variables.$gap_m;
@@ -47,9 +50,15 @@ body {
     grid-template-areas: "header"
       "main"
       "footer";
+    height: fit-content;
     grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
     column-gap: 0;
   }
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 // others

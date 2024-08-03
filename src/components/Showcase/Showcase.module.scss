@@ -3,10 +3,13 @@
 .showcase {
   @include variables.right_column_container;
   grid-area: main;
-  
+
   width: 100%;
+  height: 100%;
   overflow: hidden;
-  min-height: 100dvh;
+
+  display: grid;
+  grid-template-rows: auto 1fr;
 
   .header {
     max-width: 100%;

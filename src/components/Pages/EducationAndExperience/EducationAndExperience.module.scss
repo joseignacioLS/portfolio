@@ -4,6 +4,8 @@
   display: flex;
   flex-direction: column;
   margin-bottom: variables.$gap_m;
+  height: 100%;
+  overflow: hidden;
 
   .filterWrapper {
     display: flex;
@@ -19,6 +21,11 @@
         opacity: variables.$op_full;
       }
     }
+  }
+
+  .cardList {
+    overflow: auto;
+    scroll-behavior: smooth;
   }
 
   .entry {
