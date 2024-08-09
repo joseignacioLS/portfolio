@@ -28,16 +28,16 @@
       width: fit-content;
 
       padding-bottom: variables.$gap_s;
-      border-bottom: 8px solid rgba(variables.$color_bone, variables.$op_medium);
+      border-bottom: 8px solid rgba(variables.$color_text, variables.$op_medium);
 
       display: inline-block;
 
-      color: rgba(variables.$color_bone, variables.$op_medium);
+      color: rgba(variables.$color_text, variables.$op_medium);
       text-wrap: balance;
       line-height: 1.5ch;
 
       .name {
-        color: variables.$color_bone;
+        color: variables.$color_text;
       }
     }
   }

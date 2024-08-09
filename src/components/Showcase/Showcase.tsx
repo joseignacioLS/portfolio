@@ -9,22 +9,26 @@ import styles from "./Showcase.module.scss";
 import AboutMe from "../Pages/AboutMe/AboutMe";
 
 interface ISection {
+  id: string;
   title: string;
   component: JSXElementConstructor<any>;
   icon: string;
 }
 const sections: ISection[] = [
   {
+    id: "about",
     title: "Sobre Mí",
     component: AboutMe,
     icon: "profile-round-1342-svgrepo-com.svg",
   },
   {
+    id: "timeline",
     title: "Timeline",
     component: EducationAndExperience,
     icon: "square-cv-svgrepo-com.svg",
   },
   {
+    id: "projects",
     title: "Proyectos",
     component: Projects,
     icon: "cards-bold-svgrepo-com.svg",
@@ -33,7 +37,9 @@ const sections: ISection[] = [
 
 const Showcase = () => {
   const [selectedSection, setSelectedSection] = useState(sections[1]);
-  const handleChangeSection = (newSection: ISection) => {
+  const handleChangeSection = (id: string) => {
+    const newSection = sections.find((s) => s.id === id);
+    if (!newSection) return;
     setSelectedSection(newSection);
   };
   return (
@@ -46,7 +52,7 @@ const Showcase = () => {
               key={s.title}
               className={`${styles.tab} ${selected ? styles.selected : ""}`}
               onClick={() => {
-                handleChangeSection(s);
+                handleChangeSection(s.id);
               }}
             >
               <img src={`/icons/${s.icon}`} alt={s.title} />
@@ -54,7 +60,7 @@ const Showcase = () => {
           );
         })}
       </header>
-      <selectedSection.component />
+      <selectedSection.component setSelectedSection={handleChangeSection} />
     </section>
   );
 };

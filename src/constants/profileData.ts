@@ -110,6 +110,7 @@ export const technologies = {
 
 export const educationAndExperienceItems: IEducationAndExperienceItem[] = [
   {
+    id: "0",
     category: "experience",
     title: "Desarrollador Front End",
     position: "Desarrollador Front End Mid",
@@ -139,6 +140,7 @@ export const educationAndExperienceItems: IEducationAndExperienceItem[] = [
     ],
   },
   {
+    id: "1",
     category: "experience",
     title: "Desarrollador Front End",
     position: "Desarrollador Front End en prácticas",
@@ -163,6 +165,7 @@ export const educationAndExperienceItems: IEducationAndExperienceItem[] = [
     ],
   },
   {
+    id: "2",
     category: "education",
     title: "Bootcamp Full Stack Developer",
     position: "Estudiante",
@@ -182,6 +185,7 @@ export const educationAndExperienceItems: IEducationAndExperienceItem[] = [
     description: [],
   },
   {
+    id: "3",
     category: "experience",
     title: "Investigador en Bioinformática y Docente",
     position: "Profesor Ayudante",
@@ -204,6 +208,8 @@ export const educationAndExperienceItems: IEducationAndExperienceItem[] = [
     ],
   },
   {
+
+    id: "4",
     category: "education",
     title: "Doctor en Genética",
     position: "Becario de Doctorado",
@@ -221,6 +227,7 @@ export const educationAndExperienceItems: IEducationAndExperienceItem[] = [
     description: [],
   },
   {
+    id: "5",
     category: "experience",
     title: "Investigador Visitante",
     position: "Becario de Doctorado",
@@ -231,6 +238,7 @@ export const educationAndExperienceItems: IEducationAndExperienceItem[] = [
     description: [],
   },
   {
+    id: "6",
     category: "education",
     title: "Máster en Biotecnología para la Salud y la Sostenibilidad",
     position: "Estudiante",
@@ -241,6 +249,7 @@ export const educationAndExperienceItems: IEducationAndExperienceItem[] = [
     description: [],
   },
   {
+    id: "7",
     category: "education",
     title: "Licenciado en Biología",
     position: "Estudiante",
@@ -251,6 +260,7 @@ export const educationAndExperienceItems: IEducationAndExperienceItem[] = [
     description: [],
   },
   {
+    id: "8",
     category: "education",
     title: "C1 - Cambridge English",
     position: "",

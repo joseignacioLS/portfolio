@@ -35,8 +35,8 @@ body {
   grid-template-rows: 1fr auto;
   column-gap: variables.$gap_xl;
 
-  color: variables.$color_bone;
-  background: variables.$color_wine;
+  color: variables.$color_text;
+  background: variables.$color_main;
 
   transition: column-gap variables.$animation_default;
 

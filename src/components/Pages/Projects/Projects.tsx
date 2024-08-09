@@ -22,7 +22,11 @@ const years = Array.from(new Array(new Date().getUTCFullYear() - baseYear + 1))
 const tagWidth = 200;
 const factor = 4;
 
-const Projects = () => {
+interface IProps {
+  setSelectedSection: any;
+}
+
+const Projects = ({ setSelectedSection }: IProps) => {
   const [dragging, setDragging] = useState(false);
 
   const handleDrag = (event: React.MouseEvent) => {
@@ -106,11 +110,11 @@ const Projects = () => {
                   items: [
                     ...acc.items,
                     <div
-                      key={`${item.title}-${startDate}`}
+                      key={item.id}
                       className={styles.timeline}
                       style={{
                         top: `${100 + row * 70}px`,
-                        paddingLeft: `${
+                        marginLeft: `${
                           factor * 100 * (timeSinceFinish / totalTime)
                         }px`,
                       }}
@@ -124,6 +128,13 @@ const Projects = () => {
                       <div
                         className={styles.tag}
                         style={{ width: `${tagWidth}px` }}
+                        onClick={() => {
+                          console.log("wi!");
+                          setSelectedSection("timeline");
+                          setTimeout(() => {
+                            window.location.href = `#${item.id}`;
+                          }, 0);
+                        }}
                       >
                         <p>{item.title}</p>
                         <p className={styles.entity}>@ {item.entity}</p>

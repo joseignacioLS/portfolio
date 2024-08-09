@@ -5,18 +5,13 @@ import {
   technologies,
 } from "@/constants/profileData";
 import ExpandableHeight from "@/components/ExpandableHeight/ExpandableHeight";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 enum EModes {
   FULL = "full",
   EDUCATION = "education",
   EXPERIENCE = "experience",
 }
-
-const categoryToIcon = {
-  [EModes.EDUCATION]: "book",
-  [EModes.EXPERIENCE]: "case",
-};
 
 const EducationAndExperience = () => {
   const [mode, setMode] = useState(EModes.FULL);
@@ -29,6 +24,10 @@ const EducationAndExperience = () => {
     cardListRef?.current?.scrollTo({ top: 0 });
     setMode(filter as EModes);
   };
+
+  useEffect(() => {
+    setMode(EModes.FULL);
+  }, []);
   return (
     <section className={styles.educationAndExperience}>
       <div className={styles.filterWrapper}>
@@ -68,7 +67,8 @@ const EducationAndExperience = () => {
               startDate !== endDate ? `${startDate} - ${endDate}` : startDate;
             return (
               <ExpandableHeight
-                key={`${item.title} ${formattedDate}`}
+                id={item.id}
+                key={item.id}
                 show={mode === EModes.FULL || mode === item.category}
                 showToggleBtn={false}
               >

@@ -37,16 +37,16 @@
     margin-bottom: variables.$gap_s;
     margin-right: variables.$gap_s;
     border-radius: 1rem;
-    background-color: rgba(variables.$color_bone,
+    background-color: rgba(variables.$color_text,
         variables.$op_lowest );
-    box-shadow: 5px 5px 0 rgba(variables.$color_bone, variables.$op_medium);
+    box-shadow: 5px 5px 0 rgba(variables.$color_text, variables.$op_medium);
 
     transition: padding variables.$animation_default;
 
 
     .title {
       @include variables.title;
-      border-bottom: 2px solid variables.$color_bone;
+      border-bottom: 2px solid variables.$color_text;
     }
 
     .subtitle {
@@ -65,7 +65,7 @@
       span {
         @include variables.quote;
         border-radius: 1000px;
-        background-color: rgba(variables.$color_seagull, variables.$op_medium);
+        background-color: rgba(variables.$color_subtle, variables.$op_medium);
         padding: variables.$gap_xs variables.$gap_s;
 
         display: flex;
@@ -93,13 +93,5 @@
     .descriptionLine {
       margin-bottom: 0.5ch;
     }
-
-    // &.experience {
-    //   background-color: rgba(variables.$color_leaf, variables.$op_medium);
-    // }
-
-    // &.education {
-    //   background-color: rgba(variables.$color_seagull, variables.$op_medium);
-    // }
   }
 }

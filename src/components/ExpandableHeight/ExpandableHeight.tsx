@@ -2,6 +2,7 @@ import { ReactNode, useEffect, useState } from "react";
 import styles from "./ExpandableHeight.module.scss";
 
 interface IProps {
+  id?: string;
   children: ReactNode;
   showToggleBtn?: boolean;
   showContentText?: string;
@@ -11,6 +12,7 @@ interface IProps {
 }
 
 const ExpandableHeight = ({
+  id = "",
   children,
   showToggleBtn = true,
   showContentText = "Mostrar más",
@@ -24,6 +26,7 @@ const ExpandableHeight = ({
   }, [show]);
   return (
     <div
+      id={id}
       className={`${styles.wrapper} ${isExpanded ? styles.expanded : ""} ${
         btnRight ? styles.btnRight : ""
       } ${!showToggleBtn ? styles.noToggleBtn : ""}`}

@@ -1,6 +1,7 @@
 import { ETechnologies } from "./profileData";
 
 export interface IEducationAndExperienceItem {
+  id: string;
   category: "experience" | "education";
   title: string;
   position: string;
